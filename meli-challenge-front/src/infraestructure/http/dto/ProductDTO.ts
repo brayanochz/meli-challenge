@@ -19,9 +19,8 @@ export type Item = {
 }
 
 
-export interface SearchDTO {
+export interface ProductDTO {
     autor: Autor;
     categories: string[];
     items: Item[];
-    
 }
