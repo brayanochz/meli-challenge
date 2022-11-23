@@ -1,13 +1,14 @@
 import MELILogo from '../../../assets/logo.png'
-import Input from '../Input'
-import SearchIcon from '../../../assets/icon/search.svg';
-import './styles.css';
+import SearchInput from '../SearchInput';
+
 
 const Header = () => {
     return (
         <div className="header">
-            <img src={MELILogo} alt="Mercado libre" />
-            <Input icon={<img src={SearchIcon} alt="icon"/>} />
+            <div className='header__body'>
+                <img src={MELILogo} alt="Mercado libre" />
+                <SearchInput />
+            </div>
         </div>
     );
 };

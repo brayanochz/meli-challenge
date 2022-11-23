@@ -12,8 +12,8 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<ProductSearch />} />
-          <Route path="list" element={<ProductList />} />
-          <Route path="detail" element={<ProductDetail />} />
+          <Route path="items" element={<ProductList />} />
+          <Route path="items/:id" element={<ProductDetail />} />
           <Route path="v1" element={<ProductListV1 />} />
           <Route path="*" element={<p>404 not found</p>} />
         </Route>
