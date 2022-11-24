@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Product } from '../../../../domain/models/Product';
 import ProductFreeShipping from '../ProductFreeShipping';
+import ProductImage from '../ProductImage';
 import ProductPrice from '../ProductPrice';
 import ProductTitle from '../ProductTitle';
 
@@ -13,7 +14,12 @@ const ProductCard: FC<ProductCardProps> = ({product}) => {
         <>
             <div className='product-card'>
                 <div className='product-card__img-container'>
-                    <img className='' src={product.picture} alt={product.title} />
+                    <ProductImage
+                        src={product.picture}
+                        alt={product.title}
+                        productId={product.id}
+                        title={product.title}
+                    />
                 </div>
                 <div className='product-card__info-container'>
                     <div className='product-card__info-container__price'>
@@ -21,10 +27,10 @@ const ProductCard: FC<ProductCardProps> = ({product}) => {
                             <ProductFreeShipping freeShipping={product.free_shipping} />
                         </ProductPrice>
                     </div>
-                    <ProductTitle title={product.title} />
+                    <ProductTitle productId={product.id} title={product.title} />
                 </div>
                 <div className='product-card__address-container'>
-                    <span className='product-card__address-container__city'>{product.address.city_name}</span>
+                    <span className='product-card__address-container__city'>{product?.address?.city_name}</span>
                 </div>
             </div>
         </>

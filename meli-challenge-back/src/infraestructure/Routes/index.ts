@@ -1,5 +1,5 @@
 import { Express, Router } from 'express';
-import { SearchProducts } from '../../application/searchProducts';
+import { ProductController } from '../Controllers/ProductController';
 
 export const initRoutes= (app: Express) => {
 
@@ -9,7 +9,8 @@ export const initRoutes= (app: Express) => {
 
     const apiRouter = Router();
 
-    apiRouter.get('/items', SearchProducts)
+    apiRouter.get('/items', ProductController.SearchProducts)
+    apiRouter.get('/items/:id', ProductController.GetProductById)
 
     app.use('/api', apiRouter)
 }

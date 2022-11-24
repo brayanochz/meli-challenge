@@ -8,22 +8,35 @@ body {
 }
 
 .main-container {
-  max-width: 80vw;
-  margin: 0 10vw;
+  max-width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
   position: inherit;
   height: 100%;
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
 }
 
 
 // Components
 @import '../src/infraestructure/components/Header/';
 @import '../src/infraestructure/components/Input/';
+@import '../src/infraestructure/components/Button/';
 @import '../src/infraestructure/components/Product/ProductCard/';
 @import '../src/infraestructure/components/Product/ProductPrice/';
 @import '../src/infraestructure/components/Product/ProductTitle/';
 @import '../src/infraestructure/components/Product/ProductFreeShipping/';
+@import '../src/infraestructure/components/Product/ProductCondition/';
 
 
 // Pages
 @import '../src/infraestructure/Pages/Layout/';
-@import '../src/infraestructure/Pages/ProductList/';
+@import '../src/infraestructure/Pages/ProductDetail/';

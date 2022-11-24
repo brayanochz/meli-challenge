@@ -3,6 +3,7 @@ import { SearchDTO } from "../http/dto/SearchDTO"
 import { Product } from "../../domain/models/Product"
 import { ProductRepositoy } from '../../domain/repositories/product.repository'
 import { Autor } from '../../domain/models/Autor'
+import { ProductDTO } from '../http/dto/ProductDTO'
 
 const API_URL = process.env.REACT_APP_API_URL
 
@@ -17,5 +18,11 @@ export const productsRepository: ProductRepositoy = {
         }
 
         return { items, categories, autor };
+    },
+    getProductById: async (productId: string) => {
+        const productResult = await http.get<ProductDTO>(`${API_URL}/items/${productId}`)        
+        const product: Product = productResult;
+
+        return product;
     }
 }

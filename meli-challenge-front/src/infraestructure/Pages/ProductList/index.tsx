@@ -21,14 +21,12 @@ const ProductList = () => {
     },[])
 
     return (
-        <div className='product-list'>
-            <div className='main-container'>
-                <div>Componenet breadcumb</div>
-                <div className='product-list__body'>
-                    {products?.map((product) => (
-                        <ProductCard key={`product-${product.id}`} product={product} />
-                    ))}
-                </div>
+        <div className='main-container'>
+            <div>Componenet breadcumb</div>
+            <div className='main-container__body'>
+                {products?.map((product) => (
+                    <ProductCard key={`product-${product.id}`} product={product} />
+                ))}
             </div>
         </div>
     );

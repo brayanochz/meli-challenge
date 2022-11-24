@@ -1,7 +1,7 @@
 require('dotenv').config();
 import express from 'express';
+import { initRoutes } from './Infraestructure/Routes';
 var cors = require('cors');
-import { initRoutes } from "./infraestructure/controllers";
 
 const app = express();
 const port = process.env.PORT;

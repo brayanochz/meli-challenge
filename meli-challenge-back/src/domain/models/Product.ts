@@ -18,7 +18,8 @@ export type Product = {
     picture: string;
     condition: string;
     free_shipping: boolean;
-    address: Address;
+    address?: Address;
+    description?: string;
 }
 
 export type Products = Product[];

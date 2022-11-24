@@ -1,12 +1,8 @@
+import { Price } from "./PriceDTO";
+
 export type Autor = {
     name: string;
     lastname: string;
-}
-
-export type Price = {
-    currency: string;
-    amount: number;
-    decimals: number;
 }
 
 export type Address = {
