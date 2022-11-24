@@ -9,7 +9,9 @@ interface InputProps {
 const Input:FC<InputProps & InputHTMLAttributes<HTMLInputElement>> = ({
     icon,
     actionIcon,
-    action, 
+    action,
+    value = "",
+    onChange,
     ...props
 }) => {
 
@@ -19,7 +21,13 @@ const Input:FC<InputProps & InputHTMLAttributes<HTMLInputElement>> = ({
 
     return (
         <div className='input'>
-            <input className='input__field' {...props} type="text" />
+            <input
+                value={value}
+                onChange={onChange}
+                className='input__field' 
+                {...props}
+                type="text"
+            />
             {icon && <span onClick={handleClick} className='input__icon'>{icon}</span>}
         </div>
     );

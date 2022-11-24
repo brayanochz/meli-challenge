@@ -19,9 +19,10 @@ export const productRepository: ProductRepositoy = {
             picture: result.thumbnail,
             condition: result.condition,
             free_shipping: result.shipping.free_shipping,
+            address: result.address,
         }))
         const filterCategories = searchResult.available_filters.find((filter) => filter.id === 'category')?.values
-        const categories = filterCategories?.sort((a, b) => b.results - a.results).map((category) => category.name )
+        const categories = filterCategories?.sort((a, b) => b.results - a.results).map((category) => category.name ) || []
 
         return { items: products, categories } ;
     }

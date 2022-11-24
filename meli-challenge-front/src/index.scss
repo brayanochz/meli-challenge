@@ -18,7 +18,10 @@ body {
 // Components
 @import '../src/infraestructure/components/Header/';
 @import '../src/infraestructure/components/Input/';
-@import '../src/infraestructure/components/ProductCard/';
+@import '../src/infraestructure/components/Product/ProductCard/';
+@import '../src/infraestructure/components/Product/ProductPrice/';
+@import '../src/infraestructure/components/Product/ProductTitle/';
+@import '../src/infraestructure/components/Product/ProductFreeShipping/';
 
 
 // Pages

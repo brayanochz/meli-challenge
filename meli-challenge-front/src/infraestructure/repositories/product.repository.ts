@@ -9,8 +9,8 @@ const API_URL = process.env.REACT_APP_API_URL
 export const productsRepository: ProductRepositoy = {
     getProducts: async (query: string) => {
         const searchResult = await http.get<SearchDTO>(`${API_URL}/items?q=${query}`)        
-        const items: Product[] = [ ...searchResult.items ];
-        const categories: string[] = [ ...searchResult.categories ];
+        const items: Product[] = [ ...searchResult?.items ];
+        const categories: string[] = [ ...searchResult?.categories ];
         const autor: Autor = {
             name: 'nn',
             lastname: 'nn',

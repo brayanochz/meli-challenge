@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import Input from '../Input';
-import SearchIcon from '../../../assets/icon/search.svg';
+import SearchIcon from '../../../assets/ic_Search.png';
 import { useSearch } from '../../../domain/hooks/useSearch';
 import { useQuery } from '../../../domain/hooks/useQuery';
+
+// TODO: cambiara formulario
 
 const SearchInput = () => {
     const query = useQuery();

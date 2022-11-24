@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useQuery } from '../../../domain/hooks/useQuery';
 import { Product } from '../../../domain/models/Product';
 import { productService } from '../../../domain/services/Product.service';
-import ProductCard from '../../components/ProductCard';
+import ProductCard from '../../components/Product/ProductCard';
 
 const ProductList = () => {
 
