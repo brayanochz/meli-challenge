@@ -11,7 +11,7 @@ const API_ITEMS_URL = process.env.API_ITEMS_URL
 export const productRepository: ProductRepositoy = {
     getProducts: async (query: string) => {
         const searchResult = await http.get<SearchDTO>(`${API_SEARCH_URL}?q=${query}`)
-        const products: Product[] = searchResult.results.map((result) => ({
+        const products: Product[] = searchResult.results.slice(0,4).map((result) => ({
             id: result.id,
             title: result.title,
             price: {

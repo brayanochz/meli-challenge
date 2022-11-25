@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container {
+  max-width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
+  position: inherit;
+  height: 100%;
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+}
+
+
+// Components
+@import './infraestructure/components/Header/';
+@import './infraestructure/components/Input/';
+@import './infraestructure/components/Button/';
+@import './infraestructure/components/SearchInput/';
+@import './infraestructure/components/Product/ProductCard/';
+@import './infraestructure/components/Product/ProductPrice/';
+@import './infraestructure/components/Product/ProductTitle/';
+@import './infraestructure/components/Product/ProductFreeShipping/';
+@import './infraestructure/components/Product/ProductCondition/';
+
+
+// Pages
+@import './infraestructure/Pages/Layout/';
+@import './infraestructure/Pages/ProductDetail/';
