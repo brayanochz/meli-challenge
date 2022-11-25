@@ -11,12 +11,6 @@ jest.mock('../../../domain/hooks/useQuery', () => ({
    },
 }));
 
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    json: () => Promise.resolve({ rates: { CAD: 1.42 } }),
-  })
-);
-
 describe(`Product Detail`, () => {
 
   it(`render input`, () => {
