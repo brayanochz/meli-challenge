@@ -3,7 +3,7 @@
  
 ## Requerimientos
  
-+ Node js 14+
++ Node js 18+
 + yarn
  
 ## Lanzar frontend (Ract + TS + SSR):
