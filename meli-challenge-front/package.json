@@ -5,7 +5,7 @@
     "build:server": "webpack --config webpack.config.server.js",
     "build:client": "webpack --config webpack.config.client.js",
     "start": "node ./dist/server.js",
-    "launch": "yarn run build:server & yarn run build:client & yarn run start",
+    "launch": "yarn run build:client && yarn run build:server && yarn run start",
     "test": "jest --config='./jest.config.js'",
     "coverage": "jest --coverage --collectCoverageFrom='./src/client/**'"
   },
